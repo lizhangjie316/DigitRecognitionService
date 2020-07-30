@@ -83,7 +83,7 @@ docker-compose up -d
 
 > 直接通过docker run也是可以的
 >
-> 镜像位置：[https://hub.docker.com/repository/docker/superssssss/flaskkeras](https://hub.docker.com/repository/docker/superssssss/flaskkeras)
+> 镜像位置：[https://hub.docker.com/r/superssssss/flaskkeras](https://hub.docker.com/r/superssssss/flaskkeras)
 
 ### 自构建镜像方式
 
@@ -105,7 +105,7 @@ docker-compose up -d
 
 ## 深度学习模型
 
-这里我们使用一个简单的两层卷积作为手写数字识别的深度学习基础模型，该模型在mnist数据集上测试准确率维98%。
+这里我们使用一个简单的两层卷积作为手写数字识别的深度学习基础模型，该模型在mnist数据集上测试准确率为98%。
 
 ```
 _________________________________________________________________
