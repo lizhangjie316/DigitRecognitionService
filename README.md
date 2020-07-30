@@ -82,6 +82,8 @@ docker-compose up -d
 默认端口映射到`5001`，通过浏览器输入`127.0.0.1:5001/`即可查看到显示效果。
 
 > 直接通过docker run也是可以的
+>
+> 镜像位置：[https://hub.docker.com/repository/docker/superssssss/flaskkeras](https://hub.docker.com/repository/docker/superssssss/flaskkeras)
 
 ### 自构建镜像方式
 
