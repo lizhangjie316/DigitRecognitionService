@@ -26,10 +26,7 @@ app = Flask(__name__)
 @app.route('/predict', methods=['POST', 'GET'])
 def predict_data():
     t = request.form['file']
-    print(t)
     t = t[23:]
-    print(t)
-    print(t)
     image = base64.b64decode(t)
     path = "test.jpeg"
     file = open(path, 'wb')
