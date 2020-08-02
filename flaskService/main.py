@@ -9,10 +9,12 @@ from PIL import Image
 import base64
 
 import numpy as np
+from flask import render_template, Flask, request
 
 from keras.models import load_model
 
-from flask import Flask, request, render_template
+import tensorflow as tf
+graph = tf.get_default_graph()
 
 model = load_model('model.h5')
 
@@ -43,8 +45,16 @@ def predict_data():
     data = data.resize((28,28))
     data = np.array(data, 'f')
 
+
+
     data = data_process(data)
-    result = model.predict(data)
+    print(data.shape)
+    # global graph
+    # with graph.as_default():
+    model.predict(np.zeros((1, 28, 28, 1)))
+    # model.predict(data)
+    result = model.predict(data)  # 修改的代码。。。。。。
+
     # print("res", result)
     return str(result.argmax())
 
@@ -53,4 +63,4 @@ def index():
     return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run("0.0.0.0", port=5001)
+    app.run("127.0.0.1", port=5001)
